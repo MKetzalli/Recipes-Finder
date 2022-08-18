@@ -11,6 +11,33 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+#logo {
+  background-color: #FF3030;
+  border-radius: 100px;
+}
 
+#title-page {
+  font-size: 30px;
+  font-family: 'Amita';
+  margin-left: 100px;
+  color: #ffffff;
+}
 
+.brand-bar button {
+  font-family: 'Amita';
+  font-size: 20px;
+  margin-left: 40vw;
+  color: #000000;
+  height: 50px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.image-header {
+  background-image: url('images/main-header.png');
+  height: 70vh;
+  background-size: cover;
+}
 
