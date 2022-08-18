@@ -1,0 +1,16 @@
+body {
+  background-color: #152741;
+  margin: 0;
+}
+
+.brand-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
