@@ -82,4 +82,35 @@ body {
   cursor: pointer;
 }
 
+.results-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-template-areas: 
+    "text-results text-results text-results"
+    "results results results"
+}
 
+#text-results {
+  grid-area: text-results;
+  color: #ffffff;
+  font-family: 'Amita';
+  font-size: 25px;
+}
+
+.result-item {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.result-item-1 {
+  grid-area: results;
+}
+
+.result-item-2 {
+  grid-area: results;
+}
+
+.result-item-3 {
+  grid-area: results;
+}
