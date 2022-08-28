@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Amita&display=swap");
+
 :root {
   --primary-color: #152741;
-  --secundary-color: #FF3030;
+  --secondary-color: #FF3030;
   --contrast-background: rgba(0, 0, 0, 0.6);
   --font-title-style: 'Amita', cursive;
   --font-general: 'Alegreya Sans', sans-serif;
@@ -42,7 +44,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 #logo {
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   border-radius: 100px;
   height: 3rem;
 }
@@ -78,7 +80,7 @@ h1,h2,h3,h4,h5,h6,p{
   font-family: var(--font-general);
   color: var(--text-color);
   font-size: 20px;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   width: 400px;
   height: 60px;
   border: none;
@@ -99,7 +101,7 @@ h1,h2,h3,h4,h5,h6,p{
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   border: none;
   border-radius: 20px;
   box-shadow: 2px 2px 8px black;
@@ -137,7 +139,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .results .card-img-top{
   width: 150px;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   border-radius: 50%;
 }
 
@@ -164,5 +166,5 @@ h1,h2,h3,h4,h5,h6,p{
 }
 /*footer*/
 footer {
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
 }
