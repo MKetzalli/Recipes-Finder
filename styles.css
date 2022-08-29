@@ -10,25 +10,25 @@
   --text-color: white;
 }
 
-* {
+html, body {
   padding: 0;
   margin: 0;
 }
 
-body>* {
+body > * {
   background-color: var(--primary-color);
 }
 
-h1,h2,h3,h4,h5,h6,p{
+h1, h2, h3, h4, h5, h6, p {
   color: var(--text-color);
 }
 
-/*Header/navigation*/
 .image-header {
   background-image: url('images/main-header.png');
   background-size: cover;
 }
 
+/* Navigation bar */
 .mask {
   background-color: var(--contrast-background);
 }
@@ -37,10 +37,16 @@ h1,h2,h3,h4,h5,h6,p{
   margin-bottom: 50px;
 }
 
-.navbar>* {
+.navbar > * {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+#title-page {
+  font-size: 40px;
+  font-family: var(--font-title-style);
+  color: var(--text-color);
 }
 
 #logo {
@@ -49,10 +55,17 @@ h1,h2,h3,h4,h5,h6,p{
   height: 3rem;
 }
 
-#title-page {
-  font-size: 30px;
-  font-family: var(--font-title-style);
+.button-random {
+  font-family : var(--font-title-style);
   color: var(--text-color);
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.button-random:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .navbar a {
@@ -62,6 +75,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 /*Section of search*/
+
 #text-search-section {
   color: var(--text-color);
   font-family: var(--font-general);
@@ -94,7 +108,7 @@ h1,h2,h3,h4,h5,h6,p{
   justify-content: flex-end;
 }
 
-.button-find button {
+.submit-button-find {
   margin-top: 20px;
   font-family: var(--font-general);
   color: var(--text-color);
@@ -107,7 +121,12 @@ h1,h2,h3,h4,h5,h6,p{
   box-shadow: 2px 2px 8px black;
 }
 
-/*section results*/
+.submit-button-find:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+/*Section of results*/
+
 .results {
   padding-bottom: 50px;
 }
@@ -121,50 +140,9 @@ h1,h2,h3,h4,h5,h6,p{
   padding-bottom: 10px;
 }
 
-.card {
-  text-align: center;
-  color:var(--primary-color);
-}
 
-.card-deck .card img {
-  height: 200px;
-}
-/*for detail*/
-.form-check-label{
-  color: var(--text-color);
-}
-/*for social buttons*/
-.results .card-body>*{
-  color: var(--primary-color);
-}
-.results .card-img-top{
-  width: 150px;
-  background-color: var(--secondary-color);
-  border-radius: 50%;
-}
+/* ADD STYLE FOR API RESULTS */
 
-.results .card{
-  align-items: center;
-}
-
- .fa {
-  padding: 20px;
-  font-size: 0px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-instagram,.fa-linkedin,.fa-github  {
-  background: #3B5998;
-  color: white;
-}
-/*footer*/
 footer {
   background-color: var(--secondary-color);
 }
