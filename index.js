@@ -41,7 +41,11 @@ async function getMealNamesImages(event) {
 form.addEventListener('submit', getMealNamesImages)
 // When change input, delete div that contained previous entries
 input.addEventListener('change', () => {
-  const div = document.querySelector('.results-container')
-  div.remove()
+  try {
+    const div = document.querySelector('.results-container')
+    div.remove()
+  } catch(err) {
+    return
+  }
 })
 
