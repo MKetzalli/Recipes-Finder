@@ -1,106 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Amita&display=swap");
 
+/* Main configuration */
+
 :root {
   --primary-color: #152741;
   --secondary-color: #FF3030;
-  --contrast-background: rgba(0, 0, 0, 0.6);
   --font-title-style: 'Amita', cursive;
-  --font-general: 'Alegreya Sans', sans-serif;
-  --font: 1.6rem;
+  --font-general: 'Alegraya Sans', sans-serif;
   --text-color: white;
 }
 
-html, body {
-  padding: 0;
-  margin: 0;
-}
-
-body > * {
-  background-color: var(--primary-color);
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  color: var(--text-color);
-}
-
-.image-header {
+body {
+  height: 100vh;
   background-image: url('images/main-header.png');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Navigation bar */
-.mask {
-  background-color: var(--contrast-background);
+/* Nav section */
+
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.navbar {
-  margin-bottom: 50px;
-}
 
-.navbar > * {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#title-page {
-  font-size: 40px;
-  font-family: var(--font-title-style);
+.brand-name {
+  display: inline;
   color: var(--text-color);
+  font-family: var(--font-title-style);
+  font-size: 70px;
+  margin-left: 60px;
 }
 
-#logo {
+
+.logo-image {
   background-color: var(--secondary-color);
-  border-radius: 100px;
-  height: 3rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .button-random {
-  font-family : var(--font-title-style);
+  font-family: var(--font-title-style);
   color: var(--text-color);
-  font-size: 20px;
-  background-color: transparent;
+  font-size: 30px;
   border-radius: 50%;
-  padding: 10px;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px black;
+
 }
 
 .button-random:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.navbar a {
-  font-family: var(--font-title-style);
-  font-size: 20px;
-  color: var(--text-color);
+/* Search section */
+
+.text-search-section {
+  color: red;
+  font-family: 'Amita'
 }
 
-/*Section of search*/
+.search-section {
+  display: flex;
+  justify-content: center;
+}
 
-#text-search-section {
+
+.text-search-section {
   color: var(--text-color);
   font-family: var(--font-general);
   font-weight: bold;
   text-shadow: 2px 2px 5px black;
 }
 
-.search-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#recipe-form input {
-  font-family: var(--font-general);
-  color: var(--text-color);
-  font-size: 20px;
-  background-color: var(--secondary-color);
-  width: 400px;
-  height: 60px;
-  border: none;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 2px 2px 8px black;
+.recipe-form input {
+ font-family: var(--font-general);
+ color: var(--text-color);
+ font-size: 20px;
+ background-color: var(--secondary-color);
+ width: 500px;
+ height: 60px;
+ border: none;
+ border-radius: 20px;
+ padding: 30px;
+ box-shadow: 2px 2px 8px black;
 }
 
 .button-find {
@@ -125,24 +113,18 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: rgba(255, 255, 255, 0.3);
   color: #000;
 }
-/*Section of results*/
 
-.results {
-  padding-bottom: 50px;
-}
-
-#text-results {
-  color: var(--text-color);
-  font-family: var(--font-general);
-  font-weight: bold;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-
-/* ADD STYLE FOR API RESULTS */
+/* Footer section */
 
 footer {
   background-color: var(--secondary-color);
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
+
+
+.copyright-text {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
