@@ -37,3 +37,7 @@ async function getMealNamesImages(event) {
   })
 }
 
+// Obtain the name and image of recipe when submit input field
+form.addEventListener('submit', getMealNamesImages)
+
+
