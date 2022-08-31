@@ -23,4 +23,17 @@ async function getMealNamesImages(event) {
 
   const ingredient = document.querySelector('input').value
   const data = await getData(ingredient)
+
+  data.forEach(item => {
+    const divItem = document.createElement('div')
+    const h3 = document.createElement('h3')
+    const img = document.createElement('img')
+    
+    divItem.append(img, h3)
+    divContainer.append(divItem)
+    h3.textContent = item['strMeal']
+    img.src = item['strMealThumb']
+    divItem.classList.toggle('result-item')
+  })
 }
+
