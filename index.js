@@ -16,25 +16,28 @@ function getData(ingredient) {
 
 async function getMealNamesImages(event) {
   event.preventDefault()
+  try {
+    const divContainer = document.createElement('div')
+    results.append(divContainer)
+    divContainer.classList.toggle('results-container')
 
-  const divContainer = document.createElement('div')
-  results.append(divContainer)
-  divContainer.classList.toggle('results-container')
+    const ingredient = document.querySelector('input').value
+    const data = await getData(ingredient)
 
-  const ingredient = document.querySelector('input').value
-  const data = await getData(ingredient)
-
-  data.forEach(item => {
-    const divItem = document.createElement('div')
-    const h3 = document.createElement('h3')
-    const img = document.createElement('img')
+    data.forEach(item => {
+      const divItem = document.createElement('div')
+      const h3 = document.createElement('h3')
+      const img = document.createElement('img')
     
-    divItem.append(img, h3)
-    divContainer.append(divItem)
-    h3.textContent = item['strMeal']
-    img.src = item['strMealThumb']
-    divItem.classList.toggle('result-item')
-  })
+      divItem.append(img, h3)
+      divContainer.append(divItem)
+      h3.textContent = item['strMeal']
+      img.src = item['strMealThumb']
+      divItem.classList.toggle('result-item')
+    })
+  } catch(err) {
+    alert('Not available recipes with that ingredient')
+  }
 }
 
 // Obtain the name and image of recipe when submit input field
