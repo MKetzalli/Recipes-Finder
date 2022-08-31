@@ -11,3 +11,16 @@ function getData(ingredient) {
     .then(dishes => dishes.meals)
   )
 }
+
+//Function to obtain the name and image of the recipe and assign to DOM elements
+
+async function getMealNamesImages(event) {
+  event.preventDefault()
+
+  const divContainer = document.createElement('div')
+  results.append(divContainer)
+  divContainer.classList.toggle('results-container')
+
+  const ingredient = document.querySelector('input').value
+  const data = await getData(ingredient)
+}
