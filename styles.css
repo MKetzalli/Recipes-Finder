@@ -1,94 +1,126 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Amita&display=swap");
 
 /* Main configuration */
-
 :root {
   --primary-color: #152741;
   --secondary-color: #FF3030;
   --font-title-style: 'Amita', cursive;
   --font-general: 'Alegraya Sans', sans-serif;
   --text-color: white;
+  --contrast-background: rgba(0, 0, 0, 0.6);
+  --font: 1.6rem;
 }
 
-body {
-  height: 100vh;
-  background-image: url('images/main-header.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--text-color);
+}
+
+body>* {
+  background-color: var(--primary-color);
 }
 
 /* Nav section */
-
-nav {
-  background-color: rgba(0, 0, 0, 0.8);
+.image-header {
+  height: 70vh;
+  background-image: url('images/main-header.png');
+  background-size: cover;
 }
 
+.mask {
+  background-color: var(--contrast-background);
+}
+
+.navbar {
+  padding: 1rem;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  font-family: var(--font-title-style);
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-left: 1rem;
+}
+
+.navbar a:hover{
+  color: var(--secondary-color);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
 
 .brand-name {
   display: inline;
   color: var(--text-color);
   font-family: var(--font-title-style);
-  font-size: 70px;
-  margin-left: 60px;
+  font-size: 3rem;
+  margin-left: 3rem;
 }
-
 
 .logo-image {
   background-color: var(--secondary-color);
-  width: 100px;
-  height: 100px;
+  width: 4rem;
   border-radius: 50%;
 }
 
 .button-random {
   font-family: var(--font-title-style);
   color: var(--text-color);
-  font-size: 30px;
+  font-size: 1rem;
   border-radius: 50%;
-  padding: 20px;
+  padding: 2rem;
   background-color: var(--secondary-color);
   border: none;
-  border-radius: 20px;
-  box-shadow: 2px 2px 8px black;
-
+  border-radius: 2rem;
+  box-shadow: .2rem .2rem .8rem black;
+  
 }
 
 .button-random:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--text-color);
 }
 
 /* Search section */
-
 .text-search-section {
-  color: red;
-  font-family: 'Amita'
+  color: var(--secondary-color);
+  font-family: var(--font-title-style);
+  text-shadow: .2rem .2rem .5rem black;
 }
 
 .search-section {
+  padding-top: 10rem;
   display: flex;
   justify-content: center;
-}
-
-
-.text-search-section {
-  color: var(--text-color);
-  font-family: var(--font-general);
-  font-weight: bold;
-  text-shadow: 2px 2px 5px black;
+  flex-direction: column;
+  align-items: center;
 }
 
 .recipe-form input {
   font-family: var(--font-general);
   color: var(--text-color);
-  font-size: 20px;
+  font-size: 2rem;
   background-color: var(--secondary-color);
-  width: 500px;
-  height: 60px;
+  width: 50rem;
+  height: 6rem;
   border: none;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 2px 2px 8px black;
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: .2rem .2rem .8rem rgba(0, 0, 0, 0.548);
 }
 
 .button-find {
@@ -97,16 +129,16 @@ nav {
 }
 
 .submit-button-find {
-  margin-top: 20px;
-  font-family: var(--font-general);
+  margin-top: 2rem;
+  font-family: var(--font-title-style);
   color: var(--text-color);
-  height: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
+  height: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   background-color: var(--secondary-color);
   border: none;
-  border-radius: 20px;
-  box-shadow: 2px 2px 8px black;
+  border-radius: 2rem;
+  box-shadow: .2rem .2rem .8rem black;
 }
 
 .submit-button-find:hover {
@@ -114,36 +146,89 @@ nav {
   color: #000;
 }
 
-/* Footer section */
-
-footer {
-  background-color: var(--secondary-color);
-  bottom: 0;
-  width: 100vw;
-}
-
-
-.copyright-text {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-
 /* API DOM styles */
 .results {
-  margin: 50px;
+  padding: 1.5rem;
+}
+
+.results .card-body>* {
+  color: var(--primary-color);
+}
+
+.results .card-img-top {
+  background-color: var(--secundary-color);
+  border-radius: 50%;
+}
+
+.results .card {
+  align-items: center;
+}
+
+.result-item {
+  width: 25rem;
+}
+
+.text-results {
+  color: var(--text-color);
+  font-family: var(--font-general);
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  color: var(--primary-color);
 }
 
 .cardsOptions {
   justify-items: center;
   /*display: grid;*/
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 25px;
+  grid-gap: 1rem;
 }
 
-.result-item{
-  width: 300px;
+.cardsOptions>*{
+  padding: 1rem;
+  font-family: var(--font-title-style);
 }
 
-.cardsDetail .card-img-top{
-  width: 500px;
+.card img {
+  width: 15rem;
+}
+
+.cardsDetail .card-img-top {
+  border-radius: 0;
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardsDetail {
+  display: none;
+}
+
+.profile{
+  padding: 1rem;
+}
+
+.profile-cards>*{
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+/*no usado pero es para los ingredientes*/
+.form-check-label {
+  color: var(--text-color);
+}
+
+/* Footer section */
+footer {
+  background-color: var(--secondary-color);
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright-text {
+  background-color: rgba(0, 0, 0, 0.2);
 }
