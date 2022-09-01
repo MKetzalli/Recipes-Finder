@@ -79,16 +79,16 @@ nav {
 }
 
 .recipe-form input {
- font-family: var(--font-general);
- color: var(--text-color);
- font-size: 20px;
- background-color: var(--secondary-color);
- width: 500px;
- height: 60px;
- border: none;
- border-radius: 20px;
- padding: 30px;
- box-shadow: 2px 2px 8px black;
+  font-family: var(--font-general);
+  color: var(--text-color);
+  font-size: 20px;
+  background-color: var(--secondary-color);
+  width: 500px;
+  height: 60px;
+  border: none;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 8px black;
 }
 
 .button-find {
@@ -128,30 +128,19 @@ footer {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+
 /* API DOM styles */
-
 .results {
-  margin-top: 30px;
+  margin: 50px;
 }
 
-.results-container {
-  display: flex;
-  background-color: var(--primary-color);
-  justify-content: space-evenly;
-  gap: 15px;
+.cardsOptions {
+  justify-items: center;
+  /*display: grid;*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
-.result-item {
-  flex-basis: 200px;
-}
-
-.result-item > img {
-  max-width: 100%;
-  border-radius: 50%;
-}
-
-.result-item > h3 {
-  text-align: center;
-  font-family: var(--font-general);
-  color: var(--text-color);
+.result-item>img {
+  max-height: 200px;
 }
