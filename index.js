@@ -1,7 +1,7 @@
 // DOM Manipulation
 const results = document.querySelector('.results')
 const form = document.querySelector('form')
-const input = document.querySelector('.input-recipe')
+const input = document.querySelector('input')
 
 // Function to obtain the data from the API
 function getData(ingredient) {
@@ -21,7 +21,7 @@ async function getMealNamesImages(event) {
     results.append(divContainer)
     divContainer.classList.toggle('results-container')
 
-    const ingredient = document.querySelector('input').value
+    const ingredient = input.value
     const data = await getData(ingredient)
 
     data.forEach(item => {
@@ -43,12 +43,13 @@ async function getMealNamesImages(event) {
 // Obtain the name and image of recipe when submit input field
 form.addEventListener('submit', getMealNamesImages)
 // When change input, delete div that contained previous entries
-input.addEventListener('change', () => {
+input.addEventListener('change', removeDiv)
+
+function removeDiv() {
   try {
     const div = document.querySelector('.results-container')
     div.remove()
   } catch(err) {
     return
   }
-})
-
+}
