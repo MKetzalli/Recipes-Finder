@@ -25,39 +25,72 @@ async function getMealNamesImages(event) {
     const data = await getData(ingredient);
 
     data.forEach((item) => {
-      const divItem = document.createElement("div");
-      const h3 = document.createElement("h3");
-      const img = document.createElement("img");
+      //creando elementos de tarjeta
+      let divCardOption = document.createElement("div");
+      let imgCardOption = document.createElement("img");
+      let divCardOptionBody = document.createElement("div");
+      let h5CardOptionTitle = document.createElement("h5");
 
-      divItem.append(img, h3);
-      cardsOptions.append(divItem);
+      //agregando estilos
+      divCardOption.classList.add("card");
+      imgCardOption.classList.add("card-img-top");
+      divCardOptionBody.classList.add("card-body");
+      h5CardOptionTitle.classList.add("card-title");
 
-      h3.textContent = item["strMeal"];
-      img.src = item["strMealThumb"];
+      //indicando orden
+      cardsOptions.append(divCardOption);
+      divCardOption.append(imgCardOption, divCardOptionBody);
+      divCardOptionBody.append(h5CardOptionTitle)
+
+      //asignando valores
+      h5CardOptionTitle.textContent = item["strMeal"];
+      imgCardOption.src = item["strMealThumb"];
 
       //abrir receta al presionar imagen
-      img.addEventListener("click", getRecipe);
+      imgCardOption.addEventListener("click", getRecipe);
+
       function getRecipe() {
-        console.log(item["strArea"]); //imprime a que cocina pertenece
-        cardsOptions.style.display = "none"; //esconde el div cardsOptions (donde esta el listado)
-        cardsDetail.style.display = "block"; //muestra el div con la receta
+        cardsOptions.style.display = "none"; 
+        cardsDetail.style.display = "block"; 
 
-        //repeticion de arriba
-        let cardsDetailDiv = document.createElement("div"); //crea un div para mostrar la receta
-        let cardsDetailH2 =
-          document.getElementsByClassName("cardsDetail-h2")[0]; //crea un h2 para el titulo de la receta
-        let cardsDetailImg =
-          document.getElementsByClassName("cardsDetail-img")[0]; //crea imagen de receta
-        let cardsDetailP = document.getElementsByClassName("cardsDetail-p")[0]; //crea pasos de receta
+        //creando elementos de tarjeta
+        const divCardDetail = document.createElement("div");
+        const imgCardDetail = document.createElement("img");
+        const divCardDetailBody = document.createElement("div");
+        const h5CardDetailTitle = document.createElement("h5");
+        const h6CardDetailTitleIngredients = document.createElement("h6");
+        const ulCardDetail = document.createElement("ul");
+        const liCardDetail = document.createElement("li");
+        const h6CardDetailTitleRecipe = document.createElement("h6");
+        const pCardDetail = document.createElement("p");
 
-        cardsDetailH2.textContent = item["strMeal"]; //cambia el texto dentro por titulo de receta
-        cardsDetailImg.src = item["strMealThumb"]; //cambia imagen por imagen de receta
-        cardsDetailP.textContent = item["strInstructions"]; //cambia texto por pasos de receta
-        cardsDetail.append(cardsDetailDiv); //indica que uno esta dentro de otro
-        cardsDetailDiv.append(cardsDetailImg, cardsDetailH2, cardsDetailP); //indica que uno esta dentro de otro
-      }
+        //aplicando estilos
+        divCardDetail.classList.add("card")
+        imgCardDetail.classList.add("card-img-top")
+        divCardDetailBody.classList.add("card-body")
+        h5CardDetailTitle.classList.add("card-title")
+        h6CardDetailTitleIngredients.classList.add("card-title")
+        ulCardDetail.classList.add("list-group")
+        liCardDetail.classList.add("list-group-item")
+        h6CardDetailTitleRecipe.classList.add("card-title")
+        pCardDetail.classList.add("card-text")
 
-      divItem.classList.toggle("result-item");
+        //indicando orden
+        cardsDetail.append(divCardDetail); 
+        divCardDetail.append(imgCardDetail, divCardDetailBody); 
+        divCardDetailBody.append(h5CardDetailTitle,h6CardDetailTitleIngredients,ulCardDetail,h6CardDetailTitleRecipe,pCardDetail)
+        ulCardDetail.append(liCardDetail)
+
+        //asignacion de valores
+        imgCardDetail.src = item["strMealThumb"]; 
+        h5CardDetailTitle.textContent = item["strMeal"]; 
+        h6CardDetailTitleIngredients.textContent = "Ingredientes"; 
+        liCardDetail.textContent = item["strIngredient1"]; 
+        h6CardDetailTitleRecipe.textContent = "Proceso"; 
+        pCardDetail.textContent = item["strInstructions"]; 
+      } 
+
+      divCardOption.classList.toggle("result-item");
     });
   } catch (err) {
     alert("Not available recipes with that ingredient");
@@ -68,6 +101,13 @@ form.addEventListener("submit", () => {
   try {
     while (cardsOptions.firstChild) {
       cardsOptions.removeChild(cardsOptions.firstChild);
+    }
+  } catch (err) {
+    return;
+  }
+  try {
+    while (cardsDetail.firstChild) {
+      cardsDetail.removeChild(cardsDetail.firstChild);
     }
   } catch (err) {
     return;

@@ -118,7 +118,6 @@ nav {
 
 footer {
   background-color: var(--secondary-color);
-  position: fixed;
   bottom: 0;
   width: 100vw;
 }
@@ -138,9 +137,13 @@ footer {
   justify-items: center;
   /*display: grid;*/
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 25px;
 }
 
-.result-item>img {
-  max-height: 200px;
+.result-item{
+  width: 300px;
+}
+
+.cardsDetail .card-img-top{
+  width: 500px;
 }
