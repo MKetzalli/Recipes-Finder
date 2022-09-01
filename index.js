@@ -4,7 +4,7 @@ const form = document.querySelector('form')
 const input = document.querySelector('input')
 
 // Function to obtain the data from the API
-function getData(ingredient) {
+function getDataRecipe(ingredient) {
   return(
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ingredient}`)
     .then(res => res.json())
@@ -14,42 +14,41 @@ function getData(ingredient) {
 
 //Function to obtain the name and image of the recipe and assign to DOM elements
 
-async function getMealNamesImages(event) {
+async function getThumbnailRecipe(event) {
   event.preventDefault()
+  // Create a try and catch method when user inputs an invalid ingredient
   try {
-    const divContainer = document.createElement('div')
-    results.append(divContainer)
-    divContainer.classList.toggle('results-container')
-
+    // Create a document frament to store elements and then append, store the ingredient and the data
+    const container = document.createDocumentFragment()
     const ingredient = input.value
-    const data = await getData(ingredient)
+    const data = await getDataRecipe(ingredient)
 
+    // Validation to remove previous entries and avoid automatic append
+    const section = document.querySelector('.results-container')
+
+    if (section.children) {
+      const array = Array.from(section.children)
+      array.forEach(item => item.remove())
+    }
+    // Loop throught all recipes and create DOM elements
     data.forEach(item => {
-      const divItem = document.createElement('div')
+      const div = document.createElement('div')
       const h3 = document.createElement('h3')
       const img = document.createElement('img')
-    
-      divItem.append(img, h3)
-      divContainer.append(divItem)
+   
       h3.textContent = item['strMeal']
       img.src = item['strMealThumb']
-      divItem.classList.toggle('result-item')
+  
+      div.append(img, h3)
+      container.append(div)
+      div.classList.add('result-item')
     })
+
+    results.append(container)
   } catch(err) {
-    alert('Not available recipes with that ingredient')
+    alert('Not available recipes for that ingredient')
   }
 }
 
 // Obtain the name and image of recipe when submit input field
-form.addEventListener('submit', getMealNamesImages)
-// When change input, delete div that contained previous entries
-input.addEventListener('change', removeDiv)
-
-function removeDiv() {
-  try {
-    const div = document.querySelector('.results-container')
-    div.remove()
-  } catch(err) {
-    return
-  }
-}
+form.addEventListener('submit', getThumbnailRecipe)
