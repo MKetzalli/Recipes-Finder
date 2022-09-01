@@ -11,7 +11,7 @@
 }
 
 body {
-  height: 100vh;
+  background-attachment: fixed;
   background-image: url('images/main-header.png');
   background-size: cover;
   background-position: center;
@@ -137,7 +137,7 @@ footer {
 .results-container {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: space-evenly;
   gap: 15px;
 }
