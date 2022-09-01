@@ -38,7 +38,8 @@ async function getThumbnailRecipe(event) {
    
       h3.textContent = item['strMeal']
       img.src = item['strMealThumb']
-  
+      img.dataset.id = item['idMeal']  
+
       div.append(img, h3)
       container.append(div)
       div.classList.add('result-item')
