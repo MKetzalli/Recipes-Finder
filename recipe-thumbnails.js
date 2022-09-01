@@ -40,6 +40,9 @@ async function getThumbnailRecipe(event) {
       img.src = item['strMealThumb']
       img.dataset.id = item['idMeal']  
 
+      img.setAttribute('data-bs-toggle', 'modal')
+      img.setAttribute('data-bs-target', '#recipe')
+
       div.append(img, h3)
       container.append(div)
       div.classList.add('result-item')
