@@ -68,7 +68,6 @@ body>* {
   display: inline;
   color: var(--text-color);
   font-family: var(--font-title-style);
-  font-size: 3rem;
   margin-left: 3rem;
 }
 
@@ -113,13 +112,12 @@ body>* {
 .recipe-form input {
   font-family: var(--font-general);
   color: var(--text-color);
-  font-size: 2rem;
   background-color: var(--secondary-color);
-  width: 50rem;
-  height: 6rem;
+  width: 100%;
+  height:min-content;
   border: none;
   border-radius: 2rem;
-  padding: 3rem;
+  padding: 1.5rem;
   box-shadow: .2rem .2rem .8rem rgba(0, 0, 0, 0.548);
 }
 
@@ -193,7 +191,7 @@ body>* {
 }
 
 .card img {
-  width: 15rem;
+  width: 50%;
 }
 
 .cardsDetail .card-img-top {
@@ -209,6 +207,7 @@ body>* {
 
 .profile{
   padding: 1rem;
+  margin: 0.5rem;
 }
 
 .profile-cards>*{
@@ -231,4 +230,40 @@ footer {
 
 .copyright-text {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 0px) and (max-width: 599px){
+  .cardsOptions {
+    justify-items: center;
+    /*display: grid;*/
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+  .cardsOptions>*{
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px){
+  .cardsOptions {
+    justify-items: center;
+    /*display: grid;*/
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .cardsOptions>*{
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+  .cardsOptions {
+    justify-items: center;
+    /*display: grid;*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  .cardsOptions>*{
+    width: 90%;
+  }
 }

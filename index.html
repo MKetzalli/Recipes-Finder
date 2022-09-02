@@ -37,23 +37,26 @@
     </div>
     </header>
     <!-- Search section -->
-    <section class="search-section">
-      <form class="recipe-form">
-        <div class="form-group">
-          <h1 class="text-search-section">Introduce your ingredient:</h1>
-          <input class="form-control form-control-lg input-recipe" type="text">
-        </div>
-        <div class="button-find">
-          <button class="submit-button-find" type="submit">Search</button>
-        </div>
-      </form>
-    </section>
+    <div class="container-fluid">
+      <section class="search-section">
+        <form class="recipe-form">
+          <div class="form-group">
+            <h1 class="text-search-section">Introduce your ingredient:</h1>
+            <input class="form-control form-control-lg input-recipe" type="text">
+          </div>
+          <div class="button-find">
+            <button class="submit-button-find" type="submit">Search</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
   </div>
 
   <!-- Results section  -->
   <section class="results">
     <h3 class="text-results">Resultados</h3>
-    <div class="container">
+    <div class="container-fluid">
       <div class="cardsOptions"></div>
       <div class="cardsDetail"></div>
     </div>
@@ -61,7 +64,7 @@
 
   <!-- Footer section  -->
   <footer class="text-center text-white">
-    <div class="container">
+    <div class="container-fluid">
       <section>
         <div class="row text-center d-flex justify-content-center pt-4">
           <div class="col-md-2">
@@ -90,9 +93,6 @@
       <p>© 2022 Copyright: <a class="text-white" href="aboutUs.html">Team 18</a></p>
     </div>
   </footer>
-
-
-
 
   <!-- Get API data -->
   <script src="index.js"></script>
