@@ -38,17 +38,17 @@ async function getThumbnailRecipe(event) {
     // Loop throught all recipes and create DOM elements
     data.forEach(item => {
       const div = document.createElement('div')
-      const h3 = document.createElement('h3')
+      const h5 = document.createElement('h5')
       const img = document.createElement('img')
    
-      h3.textContent = item['strMeal']
+      h5.textContent = item['strMeal']
       img.src = item['strMealThumb']
       img.dataset.id = item['idMeal']  
 
       img.setAttribute('data-bs-toggle', 'modal')
       img.setAttribute('data-bs-target', '#recipe')
 
-      div.append(img, h3)
+      div.append(img, h5)
       container.append(div)
       div.classList.add('result-item')
     })
