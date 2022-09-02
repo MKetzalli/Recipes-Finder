@@ -6,6 +6,7 @@ async function getRecipeDetails(event) {
     const ingredientsSection = document.querySelector('.recipe-ingredients')
     const measuresSection = document.querySelector('.recipe-measures')
     const recipeDescription = document.querySelector('.recipe-description')
+    const recipeImage = document.querySelector('.recipe-image')
 
     if (ingredientsSection.children) {
       const array = Array.from(ingredientsSection.children)
@@ -22,6 +23,7 @@ async function getRecipeDetails(event) {
 
     titleSection.textContent = data[0]['strMeal']
     recipeDescription.textContent = data[0]['strInstructions']
+    recipeImage.src = data[0]['strMealThumb']
     const keys = Object.keys(data[0])
   
     const ingredientKeys = keys.filter(key => key.includes('strIngredient'))
