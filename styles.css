@@ -147,7 +147,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: space-evenly;
   gap: 15px;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
 }
 
 .result-item {
@@ -162,6 +162,7 @@ nav {
 
 .result-item > h5 {
   text-align: center;
+  margin-top: 30px;
   font-family: var(--font-general);
   color: var(--text-color);
 }
