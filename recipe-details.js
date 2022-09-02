@@ -5,6 +5,7 @@ async function getRecipeDetails(event) {
     const titleSection = document.querySelector('.recipe-title')
     const ingredientsSection = document.querySelector('.recipe-ingredients')
     const measuresSection = document.querySelector('.recipe-measures')
+    const recipeDescription = document.querySelector('.recipe-description')
 
     if (ingredientsSection.children) {
       const array = Array.from(ingredientsSection.children)
@@ -20,6 +21,7 @@ async function getRecipeDetails(event) {
     const data = await getDataRecipe(ingredient, 'lookup')
 
     titleSection.textContent = data[0]['strMeal']
+    recipeDescription.textContent = data[0]['strInstructions']
     const keys = Object.keys(data[0])
   
     const ingredientKeys = keys.filter(key => key.includes('strIngredient'))
