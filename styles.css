@@ -67,6 +67,8 @@ nav {
 
 .search-section {
   display: flex;
+  align-items: center;
+  height: 50vh;
   justify-content: center;
 }
 
@@ -116,16 +118,21 @@ nav {
 
 /* Footer section */
 
-footer {
+.footer {
   background-color: var(--secondary-color);
   position: fixed;
   bottom: 0;
+  height: 10vh;
   width: 100vw;
 }
 
 
 .copyright-text {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.copyright-text a {
+  text-decoration: none;
 }
 
 /* API DOM styles */
@@ -140,6 +147,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: space-evenly;
   gap: 15px;
+  margin-bottom: 10vh;
 }
 
 .result-item {
@@ -152,7 +160,7 @@ footer {
   border-radius: 50%;
 }
 
-.result-item > h3 {
+.result-item > h5 {
   text-align: center;
   font-family: var(--font-general);
   color: var(--text-color);
