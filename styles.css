@@ -167,9 +167,14 @@ nav {
   text-decoration: none;
 }
 
+.recipe-image-container {
+  display: flex;
+  justify-content: center;
+}
+
 .recipe-image {
-  width: 100vw;
-  height: 60vh;
+  width: 40vw;
+  height: 40vh;
   border-radius: 20%;
   padding-bottom: 30px;
 }
