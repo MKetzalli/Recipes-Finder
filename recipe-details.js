@@ -1,6 +1,14 @@
-results.addEventListener('click', getRecipeDetails)
+const randomButton = document.querySelector('.button-random')
 
-async function getRecipeDetails(event) {
+randomButton.addEventListener('click', () => {
+  getRecipeDetails(event, 'random')
+})
+
+results.addEventListener('click', () => {
+  getRecipeDetails(event, 'lookup')
+})
+
+async function getRecipeDetails(event, apimethod) {
   try {
     const titleSection = document.querySelector('.recipe-title')
     const ingredientsSection = document.querySelector('.recipe-ingredients')
@@ -17,9 +25,16 @@ async function getRecipeDetails(event) {
       const array = Array.from(measuresSection.children)
       array.forEach(item => item.remove())
     }
-  
-    const ingredient = event.target.getAttribute('data-id')
-    const data = await getDataRecipe(ingredient, 'lookup')
+ 
+    let ingredient
+    let data
+
+    if (apimethod === 'lookup') {
+      ingredient = event.target.getAttribute('data-id')
+      data = await getDataLookup(ingredient)
+    } else {
+      data = await getDataRandom()
+    }
 
     titleSection.textContent = data[0]['strMeal']
     recipeDescription.textContent = data[0]['strInstructions']
