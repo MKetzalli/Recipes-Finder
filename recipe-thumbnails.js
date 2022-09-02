@@ -3,22 +3,10 @@ const results = document.querySelector('.results')
 const form = document.querySelector('form')
 const input = document.querySelector('input')
 
-// Function to obtain the data from the API
-function getDataRecipe(ingredient, method) {
-  let query = "s"
-  if (method !== "search") {
-    query = "i"
-  }
-
-  return(
-    fetch(`https://www.themealdb.com/api/json/v1/1/${method}.php?${query}=${ingredient}`)
-    .then(res => res.json())
-    .then(dishes => dishes.meals)
-  )
-}
+// Obtain the name and image of recipe when submit input field
+form.addEventListener('submit', getThumbnailRecipe)
 
 //Function to obtain the name and image of the recipe and assign to DOM elements
-
 async function getThumbnailRecipe(event) {
   event.preventDefault()
   // Create a try and catch method when user inputs an invalid ingredient
@@ -26,7 +14,8 @@ async function getThumbnailRecipe(event) {
     // Create a document frament to store elements and then append, store the ingredient and the data
     const container = document.createDocumentFragment()
     const ingredient = input.value
-    const data = await getDataRecipe(ingredient, "search")
+    
+    const data = await getDataSearch(ingredient)
 
     // Validation to remove previous entries and avoid automatic append
     const section = document.querySelector('.results-container')
@@ -35,6 +24,7 @@ async function getThumbnailRecipe(event) {
       const array = Array.from(section.children)
       array.forEach(item => item.remove())
     }
+
     // Loop throught all recipes and create DOM elements
     data.forEach(item => {
       const div = document.createElement('div')
@@ -59,5 +49,4 @@ async function getThumbnailRecipe(event) {
   }
 }
 
-// Obtain the name and image of recipe when submit input field
-form.addEventListener('submit', getThumbnailRecipe)
+
