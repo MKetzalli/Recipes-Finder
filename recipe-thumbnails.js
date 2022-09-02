@@ -4,9 +4,14 @@ const form = document.querySelector('form')
 const input = document.querySelector('input')
 
 // Function to obtain the data from the API
-function getDataRecipe(ingredient) {
+function getDataRecipe(ingredient, method) {
+  let query = "s"
+  if (method !== "search") {
+    query = "i"
+  }
+
   return(
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ingredient}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/${method}.php?${query}=${ingredient}`)
     .then(res => res.json())
     .then(dishes => dishes.meals)
   )
@@ -21,7 +26,7 @@ async function getThumbnailRecipe(event) {
     // Create a document frament to store elements and then append, store the ingredient and the data
     const container = document.createDocumentFragment()
     const ingredient = input.value
-    const data = await getDataRecipe(ingredient)
+    const data = await getDataRecipe(ingredient, "search")
 
     // Validation to remove previous entries and avoid automatic append
     const section = document.querySelector('.results-container')
