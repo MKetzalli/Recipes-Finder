@@ -13,19 +13,23 @@ async function getRecipeDetails(event, apimethod) {
     const titleSection = document.querySelector('.recipe-title')
     const ingredientsSection = document.querySelector('.recipe-ingredients')
     const measuresSection = document.querySelector('.recipe-measures')
-    const recipeDescription = document.querySelector('.recipe-description')
+    const recipeDescriptionContent = document.querySelector('.recipe-description-content')
     const recipeImage = document.querySelector('.recipe-image')
 
     if (ingredientsSection.children) {
-      const array = Array.from(ingredientsSection.children)
-      array.forEach(item => item.remove())
+      const ingredientsChildren = Array.from(ingredientsSection.children)
+      ingredientsChildren.forEach(item => item.remove())
     }
 
     if (measuresSection.children) {
-      const array = Array.from(measuresSection.children)
-      array.forEach(item => item.remove())
+      const measuresChildren = Array.from(measuresSection.children)
+      measuresChildren.forEach(item => item.remove())
     }
- 
+
+    if (recipeImage) {
+      recipeImage.src = ''
+    }
+
     let ingredient
     let data
 
@@ -36,23 +40,33 @@ async function getRecipeDetails(event, apimethod) {
       data = await getDataRandom()
     }
 
+    const measuresHeader = document.createElement('h2')
+    const ingredientsHeader = document.createElement('h2')
+
+    measuresHeader.textContent = 'Measures'
+    measuresSection.append(measuresHeader)
+
+    ingredientsHeader.textContent = 'Ingredients'
+    ingredientsSection.append(ingredientsHeader)
+
     titleSection.textContent = data[0]['strMeal']
-    recipeDescription.textContent = data[0]['strInstructions']
+    recipeDescriptionContent.textContent = data[0]['strInstructions']
     recipeImage.src = data[0]['strMealThumb']
+    
     const keys = Object.keys(data[0])
   
-    const ingredientKeys = keys.filter(key => key.includes('strIngredient'))
-    ingredientKeys.forEach(ingredientKey => {
-      const p = document.createElement('p')
-      p.textContent = data[0][ingredientKey]
-      ingredientsSection.append(p)
-    })
-
     const measureKeys = keys.filter(key => key.includes('strMeasure'))
     measureKeys.forEach(measureKey => {
       const p = document.createElement('p')
       p.textContent = data[0][measureKey]
       measuresSection.append(p)
+    })
+    
+    const ingredientKeys = keys.filter(key => key.includes('strIngredient'))
+    ingredientKeys.forEach(ingredientKey => {
+      const p = document.createElement('p')
+      p.textContent = data[0][ingredientKey]
+      ingredientsSection.append(p)
     })
   } catch(err) {
     return

@@ -116,25 +116,6 @@ nav {
   color: #000;
 }
 
-/* Footer section */
-
-.footer {
-  background-color: var(--secondary-color);
-  position: fixed;
-  bottom: 0;
-  height: 10vh;
-  width: 100vw;
-}
-
-
-.copyright-text {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.copyright-text a {
-  text-decoration: none;
-}
-
 /* API DOM styles */
 
 .results {
@@ -166,3 +147,30 @@ nav {
   font-family: var(--font-general);
   color: var(--text-color);
 }
+
+/* Footer section */
+
+.footer {
+  background-color: var(--secondary-color);
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100vw;
+}
+
+
+.copyright-text {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.copyright-text a {
+  text-decoration: none;
+}
+
+.recipe-image {
+  width: 100vw;
+  height: 60vh;
+  border-radius: 20%;
+  padding-bottom: 30px;
+}
+
