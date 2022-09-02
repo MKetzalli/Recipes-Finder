@@ -154,13 +154,12 @@ body>* {
 }
 
 .results .card-img-top {
-  background-color: var(--secundary-color);
   border-radius: 50%;
 }
 
 .results .card {
   align-items: center;
-}
+  }
 
 .result-item {
   width: 25rem;
