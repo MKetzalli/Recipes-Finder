@@ -19,7 +19,7 @@
 .results {
   padding: 1.5rem;
   display: flex;
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
 }
 
 .results .card-body > * {
@@ -49,7 +49,6 @@
 
 .cardsOptions {
   justify-items: center;
-  /*display: grid;*/
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }

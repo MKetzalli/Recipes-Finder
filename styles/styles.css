@@ -167,10 +167,6 @@ nav img {
   width: 60%;
 }
 
-.modal-fullscreen {
-  padding: 100px;
-}
-
 .result-item {
   flex-basis: 20rem;
   margin-top: 2rem;
@@ -213,9 +209,8 @@ nav img {
 
 .recipe-image {
   margin-bottom: 30px;
-  height: 40vh;
-  width: 100%;
-  object-fit: cover;
+  height: 50vh;
+  object-fit: contain;
 }
 
 .recipe-image-container {
@@ -234,28 +229,14 @@ footer {
   text-align: center;
   width: 100vw;
   position: fixed;
-  height: 20vh;
 }
 
-footer>div>section>.row>.col-lg-8>p{
+footer p {
   color: white;
-}
-
-footer section {
-  padding: 20px;
-}
-
-footer section .row {
-  display: flex;
-  justify-content: center;
-}
-
-.copyright-text {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 30px;
   text-align: center;
+  padding: 4px;
 }
-.copyright-text p {
-  color: white;
-  text-decoration: none;
+
+.copyright-section {
+  background-color: rgba(0, 0, 0, 0.2);
 }
