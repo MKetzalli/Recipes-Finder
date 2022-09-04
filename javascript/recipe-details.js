@@ -7,7 +7,7 @@ randomButton.addEventListener('click', () => {
 })
 
 // Add an event listener to get the recipe by id
-results.addEventListener('click', () => {
+resultsContainer.addEventListener('click', () => {
   getRecipeDetails(event, 'lookup')
 })
 
@@ -15,7 +15,7 @@ results.addEventListener('click', () => {
 async function getRecipeDetails(event, apimethod) {
   try {
     // Get reference to DOM elements
-    const titleSection = document.querySelector('.recipe-title')
+    const titleSection = document.querySelector('.modal-title')
     const ingredientsSection = document.querySelector('.recipe-ingredients')
     const measuresSection = document.querySelector('.recipe-measures')
     const recipeDescriptionContent = document.querySelector('.recipe-description-content')

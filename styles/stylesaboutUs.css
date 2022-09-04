@@ -6,12 +6,75 @@
   text-decoration: none;
   border-radius: 50%;
 }
-
 .fa:hover {
   opacity: 0.7;
 }
 
-.fa-instagram, .fa-linkedin, .fa-github {
-  background-color: #3B5998;
+.fa-github {
+  background: #3B5998;
   color: white;
+}
+
+.results {
+  padding: 1.5rem;
+}
+.results .card-body > * {
+  color: var(--primary-color);
+}
+.results .card-img-top {
+  border-radius: 50%;
+}
+.results .card {
+  align-items: center;
+}
+
+.result-item {
+  width: 25rem;
+}
+
+.text-results {
+  color: var(--text-color);
+  font-family: var(--font-general);
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  color: var(--primary-color);
+}
+.card img {
+  width: 50%;
+}
+
+.cardsOptions {
+  justify-items: center;
+  /*display: grid;*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.cardsOptions > * {
+  padding: 1rem;
+  font-family: var(--font-title-style);
+}
+
+.cardsDetail {
+  display: none;
+}
+.cardsDetail .card-img-top {
+  border-radius: 0;
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.profile-cards > * {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+.profile {
+  padding: 1rem;
+  margin: 0.5rem;
 }
