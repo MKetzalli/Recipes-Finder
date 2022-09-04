@@ -14,7 +14,13 @@
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: var(--text-color);
 }
 
@@ -24,6 +30,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.content {
+  min-height: calc(100vh - 50px);
 }
 
 /* Nav section */
@@ -122,6 +132,7 @@ nav img {
 }
 
 .submit-button-find {
+  margin-bottom: 3rem;
   margin-top: 1rem;
   font-family: var(--font-general);
   color: var(--text-color);
@@ -191,8 +202,7 @@ nav img {
   text-align: center;
   width: 100%;
   font-weight: bold;
-  color: var(--secondary-color);
-  text-shadow: 2px 2px 3px rgb(168, 0, 0);
+  text-shadow: 2px 2px 3px rgb(204, 204, 204);
 }
 .modal .recipe-measures {
   text-align: end;
