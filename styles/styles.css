@@ -91,6 +91,7 @@ nav img {
   border-radius: 2rem;
   box-shadow: 2px 2px 8px black;
 }
+
 .button-random:hover {
   background-color: var(--text-color);
 }
@@ -155,11 +156,13 @@ nav img {
   background-color: rgba(0, 0, 0, 0.418);
   justify-content: space-evenly;
   gap: 15px;
-  margin-bottom: 10vh;
+  margin-bottom: 30vh;
 }
+
 .results-container .result-item {
   text-align: center;
 }
+
 .results-container .result-item img {
   width: 60%;
 }
@@ -172,10 +175,12 @@ nav img {
   flex-basis: 20rem;
   margin-top: 2rem;
 }
+
 .result-item > img {
   max-width: 100%;
   border-radius: 50%;
 }
+
 .result-item > h5 {
   text-align: center;
   margin-top: 1rem;
@@ -187,17 +192,21 @@ nav img {
 .modal h1,p,h2{
   color: black;
 }
+
 .modal-header {
   background-color: rgb(238, 238, 238);
 }
+
 .modal-title {
   text-align: center;
   width: 100%;
   text-shadow: 2px 2px 3px rgb(204, 204, 204);
 }
+
 .recipe-measures {
   text-align: end;
 }
+
 .recipe-ingredients {
   text-align: start;
 }
@@ -224,7 +233,10 @@ footer {
   bottom: 0;
   text-align: center;
   width: 100vw;
+  position: fixed;
+  height: 20vh;
 }
+
 footer>div>section>.row>.col-lg-8>p{
   color: white;
 }
@@ -232,6 +244,7 @@ footer>div>section>.row>.col-lg-8>p{
 footer section {
   padding: 20px;
 }
+
 footer section .row {
   display: flex;
   justify-content: center;

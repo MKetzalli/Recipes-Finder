@@ -6,6 +6,7 @@
   text-decoration: none;
   border-radius: 50%;
 }
+
 .fa:hover {
   opacity: 0.7;
 }
@@ -17,13 +18,18 @@
 
 .results {
   padding: 1.5rem;
+  display: flex;
+  margin-bottom: 30vh;
 }
+
 .results .card-body > * {
   color: var(--primary-color);
 }
+
 .results .card-img-top {
   border-radius: 50%;
 }
+
 .results .card {
   align-items: center;
 }
@@ -32,17 +38,11 @@
   width: 25rem;
 }
 
-.text-results {
-  color: var(--text-color);
-  font-family: var(--font-general);
-  font-weight: bold;
-  text-align: center;
-}
-
 .card {
   text-align: center;
   color: var(--primary-color);
 }
+
 .card img {
   width: 50%;
 }
@@ -53,6 +53,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }
+
 .cardsOptions > * {
   padding: 1rem;
   font-family: var(--font-title-style);
@@ -61,6 +62,7 @@
 .cardsDetail {
   display: none;
 }
+
 .cardsDetail .card-img-top {
   border-radius: 0;
   height: 40vh;
