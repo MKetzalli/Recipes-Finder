@@ -9,12 +9,20 @@ form.addEventListener('submit', getThumbnailRecipe)
 //Function to obtain the name and image of the recipe and assign to DOM elements
 async function getThumbnailRecipe(event) {
   event.preventDefault()
+
   // Create a try and catch method when user inputs an invalid ingredient
   try {
     // Create a document frament to store elements and then append, store the ingredient and the data
-    const container = document.createDocumentFragment()
     const ingredient = input.value
     
+    // Add validation when user input is empty
+    if (!ingredient) {
+      alert('Please insert an ingredient')
+      return      
+    }
+
+    const container = document.createDocumentFragment()
+
     const data = await getDataSearch(ingredient)
 
     // Validation to remove previous entries and avoid automatic append
