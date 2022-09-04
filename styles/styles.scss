@@ -11,6 +11,15 @@
     --font: 1.6rem;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    color: var(--text-color);
+}
+
 body {
     background-attachment: fixed;
     background-image: url('../images/main-header.png');
@@ -23,6 +32,32 @@ body {
 
 nav {
     background-color: rgba(0, 0, 0, 0.8);
+    img {
+        display: inline-block;
+        align-content: center;
+        text-align: center;
+    }
+}
+
+.navbar {
+    padding: 1rem;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    a {
+        font-family: var(--font-title-style);
+        font-size: 1rem;
+        color: var(--text-color);
+        margin-left: 1rem;
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 .brand-name {
@@ -41,9 +76,9 @@ nav {
 .button-random {
     font-family: var(--font-title-style);
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 50%;
-    padding: 1.2rem;
+    padding: 2rem;
     background-color: var(--secondary-color);
     border: none;
     border-radius: 2rem;
@@ -102,6 +137,7 @@ nav {
     border: none;
     border-radius: 2rem;
     box-shadow: .2rem .2rem .8rem black;
+
     &:hover {
         background-color: rgba(255, 255, 255, 0.3);
         color: #000;
@@ -115,23 +151,25 @@ nav {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.418);
     justify-content: space-evenly;
     gap: 15px;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 
-.modal-fullscreen{
+.modal-fullscreen {
     padding: 100px;
 }
 
 .result-item {
     flex-basis: 20rem;
     margin-top: 2rem;
+
     &>img {
         max-width: 100%;
         border-radius: 50%;
     }
+
     &>h5 {
         text-align: center;
         margin-top: 1rem;
@@ -142,11 +180,25 @@ nav {
 }
 
 //detalles de la receta
+.modal {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: black;
+    }
+
+}
+
 .recipe-image {
     margin-bottom: 30px;
-  height: 40vh;
-  width: 100%;
-  object-fit: cover;
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .recipe-image-container {
@@ -154,7 +206,11 @@ nav {
     justify-content: center;
 }
 
-.modal-title{
+.container {
+    text-align: center;
+}
+
+.modal-title {
     text-align: center;
     width: 100%;
 }
@@ -163,14 +219,28 @@ nav {
 footer {
     background-color: var(--secondary-color);
     bottom: 0;
-    height: 10vh;
+    text-align: center;
     width: 100vw;
+
+    section {
+        padding: 20px;
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
 
 .copyright-text {
     background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+
     a {
+        color: white;
         text-decoration: none;
+
         &:hover {
             background-color: rgba(255, 255, 255, 0.3);
             color: #000;
