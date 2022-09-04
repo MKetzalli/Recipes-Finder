@@ -148,6 +148,12 @@ nav img {
   gap: 15px;
   margin-bottom: 10vh;
 }
+.results-container .result-item {
+  text-align: center;
+}
+.results-container .result-item img {
+  width: 60%;
+}
 
 .modal-fullscreen {
   padding: 100px;
