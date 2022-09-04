@@ -1,5 +1,5 @@
 // DOM Manipulation
-const resultsContainer = document.querySelector('.results-container')
+const results = document.querySelector('.results')
 const form = document.querySelector('form')
 const input = document.querySelector('input')
 
@@ -43,7 +43,7 @@ async function getThumbnailRecipe(event) {
       div.classList.add('result-item')
     })
 
-    resultsContainer.append(container)
+    results.append(container)
   } catch(err) {
     alert('Not available recipes for that ingredient')
   }
