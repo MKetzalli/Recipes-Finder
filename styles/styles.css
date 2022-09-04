@@ -1,26 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Amita&display=swap");
-
 /* Main configuration */
-
 :root {
   --primary-color: #152741;
   --secondary-color: #FF3030;
-  --font-title-style: 'Amita', cursive;
-  --font-general: 'Alegraya Sans', sans-serif;
+  --font-title-style: "Amita", cursive;
+  --font-general: "Alegraya Sans", sans-serif;
   --text-color: white;
   --font: 1.6rem;
 }
 
 body {
   background-attachment: fixed;
-  background-image: url('../images/main-header.png');
+  background-image: url("../images/main-header.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 /* Nav section */
-
 nav {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -49,13 +46,11 @@ nav {
   border-radius: 2rem;
   box-shadow: 2px 2px 8px black;
 }
-
 .button-random:hover {
   background-color: var(--text-color);
 }
 
 /* Search section */
-
 .search-section {
   padding-top: 10rem;
   display: flex;
@@ -63,7 +58,6 @@ nav {
   height: 50vh;
   justify-content: center;
 }
-
 
 .text-search-section {
   color: var(--text-color);
@@ -73,16 +67,18 @@ nav {
 }
 
 .recipe-form input {
- font-family: var(--font-general);
- color: var(--text-color);
- font-size: 2rem;
- background-color: var(--secondary-color);
- width: 100%;
- height: min-content;
- border: none;
- border-radius: 2rem;
- padding: 30px;
- box-shadow: 2px 2px 8px black;
+  font-family: var(--font-general);
+  color: var(--text-color);
+  font-size: 2rem;
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  border: none;
+  border-radius: 2rem;
+  padding: 30px;
+  box-shadow: 2px 2px 8px black;
 }
 
 .button-find {
@@ -100,21 +96,16 @@ nav {
   background-color: var(--secondary-color);
   border: none;
   border-radius: 2rem;
-  box-shadow: .2rem .2rem .8rem black;
+  box-shadow: 0.2rem 0.2rem 0.8rem black;
 }
-
 .submit-button-find:hover {
   background-color: rgba(255, 255, 255, 0.3);
   color: #000;
 }
 
 /* API DOM styles */
-
-.results {
-  margin-top: 30px;
-}
-
 .results-container {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(0, 0, 0, 0.8);
@@ -123,16 +114,18 @@ nav {
   margin-bottom: 20vh;
 }
 
-.result-item {
-  flex-basis: 200px;
-  margin-top: 20px;
+.modal-fullscreen {
+  padding: 100px;
 }
 
+.result-item {
+  flex-basis: 20rem;
+  margin-top: 2rem;
+}
 .result-item > img {
   max-width: 100%;
   border-radius: 50%;
 }
-
 .result-item > h5 {
   text-align: center;
   margin-top: 1rem;
@@ -141,28 +134,12 @@ nav {
   color: var(--text-color);
 }
 
-/* Footer section */
-
-.footer {
-  background-color: var(--secondary-color);
-  position: fixed;
-  bottom: 0;
-  height: 10vh;
-  width: 100vw;
-}
-
-
-.copyright-text {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.copyright-text a {
-  text-decoration: none;
-}
-
-.copyright-text a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #000;
+.recipe-image {
+  margin-bottom: 30px;
+  height: 40vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .recipe-image-container {
@@ -170,10 +147,26 @@ nav {
   justify-content: center;
 }
 
-.recipe-image {
-  width: 40vw;
-  height: 40vh;
-  border-radius: 20%;
-  padding-bottom: 30px;
+.modal-title {
+  text-align: center;
+  width: 100%;
 }
 
+/* Footer section */
+footer {
+  background-color: var(--secondary-color);
+  bottom: 0;
+  height: 10vh;
+  width: 100vw;
+}
+
+.copyright-text {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.copyright-text a {
+  text-decoration: none;
+}
+.copyright-text a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+}/*# sourceMappingURL=styles.css.map */
