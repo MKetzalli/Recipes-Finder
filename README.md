@@ -8,7 +8,10 @@
 5. [FAQs](#faqs)
 ### General Info
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
+this project is a development done for the bedu course of web development with javascript, it seeks to demonstrate the skills acquired in the first and second phase (module 1) of the course.
+to demonstrate these competences we developed a web project that allows to consult an api of cooking recipes:
+https://www.themealdb.com/api.php
+as the user will be able to verify it is possible to make consultations of an ingredient which will deploy multiple recipes that contain the same one, in case of not being sure it will be able in the same way to consult random recipes.
 ### Screenshot
 ![Screenshot 2022-09-03 at 22-29-51 Keep Calm and Cook](https://user-images.githubusercontent.com/55233980/188296419-fb653170-d9f1-4319-84bd-335462ed9693.png)
 ![Screenshot 2022-09-03 at 22-53-41 Keep Calm and Cook](https://user-images.githubusercontent.com/55233980/188296560-5021c951-35e2-4a1f-b97a-3271ede5e921.png)
