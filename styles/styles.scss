@@ -187,7 +187,6 @@ nav {
 
 //detalles de la receta
 .modal {
-
     h1,
     h2,
     h3,
@@ -197,7 +196,22 @@ nav {
     p {
         color: black;
     }
-
+    .modal-header{
+        background-color: rgb(238, 238, 238);
+    }
+    .modal-title {
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+        color: var(--secondary-color);
+        text-shadow: 2px 2px 3px rgb(168, 0, 0);
+    }
+    .recipe-measures{
+        text-align: end;
+    }
+    .recipe-ingredients{
+        text-align: start;
+    }
 }
 
 .recipe-image {
@@ -214,11 +228,6 @@ nav {
 
 .container {
     text-align: center;
-}
-
-.modal-title {
-    text-align: center;
-    width: 100%;
 }
 
 /* Footer section */

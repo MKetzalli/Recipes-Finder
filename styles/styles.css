@@ -184,6 +184,22 @@ nav img {
 .modal p {
   color: black;
 }
+.modal .modal-header {
+  background-color: rgb(238, 238, 238);
+}
+.modal .modal-title {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 3px rgb(168, 0, 0);
+}
+.modal .recipe-measures {
+  text-align: end;
+}
+.modal .recipe-ingredients {
+  text-align: start;
+}
 
 .recipe-image {
   margin-bottom: 30px;
@@ -200,11 +216,6 @@ nav img {
 
 .container {
   text-align: center;
-}
-
-.modal-title {
-  text-align: center;
-  width: 100%;
 }
 
 /* Footer section */
