@@ -13,7 +13,7 @@ This project was made for the BEDU course of web development with javascript, it
 To demonstrate these competences we developed a web project that allows the user to find recipes based on a specific ingredient or to request a random recipe by using the API: https://www.themealdb.com/api.php
 
 ### Screenshot
-![Screenshot 2022-09-03 at 22-29-51 Keep Calm and Cook](https://user-images.githubusercontent.com/55233980/188360287-e76e23fa-79d2-4f47-93ba-8304d63e9f82.png)
+![Screenshot 2022-09-04 at 23-33-38 Keep Calm and Cook](https://user-images.githubusercontent.com/55233980/188361090-6b32178a-8f75-4f39-8d08-b3665267a44a.png)
 ![Screenshot 2022-09-03 at 22-53-41 Keep Calm and Cook](https://user-images.githubusercontent.com/55233980/188296560-5021c951-35e2-4a1f-b97a-3271ede5e921.png)
 ## Technologies
 ***
