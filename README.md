@@ -18,7 +18,7 @@ as the user will be able to verify it is possible to make consultations of an in
 ## Technologies
 ***
 A list of technologies used within the project:
-* [API](https://www.themealdb.com/)
+* [API](https://www.themealdb.com/): The meal DB
 * [HTML]: Version HTML 5
 * [CSS]: Version CSS3
 * [Javascript]: Version 1.5
