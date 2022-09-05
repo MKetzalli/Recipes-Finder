@@ -19,9 +19,9 @@ To demonstrate these competences we developed a web project that allows the user
 ***
 A list of technologies used within the project:
 * [API](https://www.themealdb.com/): The meal DB
-* [HTML]: Version HTML 5
-* [CSS]: Version CSS3
-* [Javascript]: Version 1.5
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) Version HTML5
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) Version CSS3
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) Version 1.5
 * [Bootstrap](https://getbootstrap.com/): Version 5.2.0
 ## Installation
 ***
