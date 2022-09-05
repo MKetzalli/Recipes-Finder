@@ -4,7 +4,7 @@
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
-4. [Collaboration](#collaboration)
+4. [Team](#team)
 5. [FAQs](#faqs)
 ### General Info
 ***
@@ -18,9 +18,11 @@ as the user will be able to verify it is possible to make consultations of an in
 ## Technologies
 ***
 A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
+* [API](https://www.themealdb.com/): The meal DB
+* [HTML]: Version HTML 5
+* [CSS]: Version CSS3
+* [Javascript]: Version 1.5
+* [Bootstrap](https://getbootstrap.com/): Version 5.2.0
 ## Installation
 ***
 A little intro about the installation. 
@@ -30,26 +32,17 @@ $ cd ../path/to/the/file
 $ npm install
 $ npm start
 ```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
-## Collaboration
+## Team
 ***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
+We are team 18
+* Mariano Guzmán Rodríguez
+* María Ketzalli González Acevedo
 ## FAQs
 ***
 A list of frequently asked questions
-1. **This is a question in bold**
-Answer of the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer of the third question with *italic words*.
-4. **Fourth question in bold**
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|:--------------|:-------------:|--------------:|
-| text-align left | text-align center | text-align right |
+1. **how to obtain a random recipe?**
+To get a random recipe, click on the _"surprise me"_ button in the upper right corner of the home page. 
+2. **How to search for a recipe based on any ingredient?**
+To search for recipes related to an ingredient you need to be located on the HOME page and there you will find a search box, enter there your ingredient and click on the search button, then you will be shown multiple options.
+3. **How to display recipe details?**
+To display the details of the ingredients, measurements and procedure just click on the image of the recipe, this will be enough to display it.

@@ -14,7 +14,13 @@
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: var(--text-color);
 }
 
@@ -24,6 +30,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.content {
+  min-height: calc(100vh - 50px);
 }
 
 /* Nav section */
@@ -81,6 +91,7 @@ nav img {
   border-radius: 2rem;
   box-shadow: 2px 2px 8px black;
 }
+
 .button-random:hover {
   background-color: var(--text-color);
 }
@@ -107,8 +118,6 @@ nav img {
   font-size: 2rem;
   background-color: var(--secondary-color);
   width: 100%;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
   border: none;
   border-radius: 2rem;
@@ -122,6 +131,7 @@ nav img {
 }
 
 .submit-button-find {
+  margin-bottom: 3rem;
   margin-top: 1rem;
   font-family: var(--font-general);
   color: var(--text-color);
@@ -146,27 +156,27 @@ nav img {
   background-color: rgba(0, 0, 0, 0.418);
   justify-content: space-evenly;
   gap: 15px;
-  margin-bottom: 10vh;
+  margin-bottom: 30vh;
 }
+
 .results-container .result-item {
   text-align: center;
 }
+
 .results-container .result-item img {
   width: 60%;
-}
-
-.modal-fullscreen {
-  padding: 100px;
 }
 
 .result-item {
   flex-basis: 20rem;
   margin-top: 2rem;
 }
+
 .result-item > img {
   max-width: 100%;
   border-radius: 50%;
 }
+
 .result-item > h5 {
   text-align: center;
   margin-top: 1rem;
@@ -175,38 +185,32 @@ nav img {
   color: var(--text-color);
 }
 
-.modal h1,
-.modal h2,
-.modal h3,
-.modal h4,
-.modal h5,
-.modal h6,
-.modal p {
+.modal h1,p,h2{
   color: black;
 }
-.modal .modal-header {
+
+.modal-header {
   background-color: rgb(238, 238, 238);
 }
-.modal .modal-title {
+
+.modal-title {
   text-align: center;
   width: 100%;
-  font-weight: bold;
-  color: var(--secondary-color);
-  text-shadow: 2px 2px 3px rgb(168, 0, 0);
+  text-shadow: 2px 2px 3px rgb(204, 204, 204);
 }
-.modal .recipe-measures {
+
+.recipe-measures {
   text-align: end;
 }
-.modal .recipe-ingredients {
+
+.recipe-ingredients {
   text-align: start;
 }
 
 .recipe-image {
   margin-bottom: 30px;
-  height: 40vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 50vh;
+  object-fit: contain;
 }
 
 .recipe-image-container {
@@ -224,25 +228,15 @@ footer {
   bottom: 0;
   text-align: center;
   width: 100vw;
-}
-footer section {
-  padding: 20px;
-}
-footer section .row {
-  display: flex;
-  justify-content: center;
+  position: fixed;
 }
 
-.copyright-text {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  text-align: center;
-}
-.copyright-text a {
+footer p {
   color: white;
-  text-decoration: none;
+  text-align: center;
+  padding: 4px;
 }
-.copyright-text a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #000;
-}/*# sourceMappingURL=styles.css.map */
+
+.copyright-section {
+  background-color: rgba(0, 0, 0, 0.2);
+}
